@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 
 import '../src/screens/home.dart';
-// import '../src/widgets/topBar.dart';
+// import '../src/screens/first.dart';
+// import '../src/screens/second.dart';
 
 class App extends StatelessWidget {
   Widget build(context) {
-    return MaterialApp(      
+    return MaterialApp(
       home: HomeScreen(),
-      routes: {
-        '/': (context) => FirstScreen(),
-        '/second': (context) => SecondScreen(),
-      },
+      // routes: {
+      //   '/': (context) => FirstScreen(),
+      //   '/second': (context) => SecondScreen(),
+      // },
     );
   }
 }

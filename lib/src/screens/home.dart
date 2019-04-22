@@ -19,9 +19,15 @@ class HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         actions: <Widget>[
-          Text('Delivery Address'),
+          Center(
+            child: Padding(
+              padding: EdgeInsets.only(left: 10.0),
+              child: Text('Delivery Address'),
+            ),
+          ),
           Spacer(),
           RaisedButton(
+            child: Text('Filter'),
             onPressed: () {
               print("Cool!");
             },
@@ -32,8 +38,14 @@ class HomeScreenState extends State<HomeScreen> {
       bottomNavigationBar: Container(
         height: 75.0,
         decoration: BoxDecoration(
-          color: Colors.black12.withOpacity(0.5),
-          boxShadow: [BoxShadow(blurRadius: 2.0)],
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black12.withOpacity(0.065),
+              offset: Offset(0.0, -3.0),
+              blurRadius: 10.0,
+            ),
+          ],
         ),
         child: Row(
           children: items.map((item) {
@@ -60,7 +72,7 @@ class HomeScreenState extends State<HomeScreen> {
             boxShadow: isSelected
                 ? [
                     BoxShadow(
-                        offset: Offset(0.0, 5.0),
+                        offset: Offset(0.0, 1.0),
                         blurRadius: 10.0,
                         color: Colors.black12.withOpacity(0.02))
                   ]
